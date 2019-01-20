@@ -1,0 +1,53 @@
+package ShopStuff {
+package ShopBehaviours{
+interface ISell {
+calculateMarkup(): double
+}
+}
+class Shop {
+stock: ArrayList<StockItem>
+calcualateProfit(double overhead)
+}
+abstract class StockItem {
+wholesalePrice: double
+retailPrice: double
+name: String
+description: String
+}
+StockItem ...> ISell
+}
+package InstrumentStuff {
+package InstrumentBehaviours {
+interface IPlay {
+play(Customer customer): String
+}
+}
+package Instruments{
+abstract class Instrument extends StockItem{
+    color: String
+    mainMaterial: String
+}
+
+abstract class Percussion extends Instrument{
+numberOfParts: int
+}
+abstract class Woodwind extends Instrument{
+numberOfFingerHoles: int
+}
+abstract class Brass extends Instrument{
+lengthOfTubing: int
+numberOfValves: int
+}
+abstract class Keyboard extends Instrument{
+numberOfKeys: int
+}
+abstract class String extends Instrument{
+numberOfStrings: int
+}
+}
+Instrument ...> IPlay
+}
+
+class Customer{
+name: String
+}
