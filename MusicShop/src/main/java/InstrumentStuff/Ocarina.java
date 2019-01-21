@@ -1,6 +1,5 @@
 package InstrumentStuff;
 
-import CustomerStuff.Customer;
 import InstrumentStuff.Abstracts.WoodwindFamily;
 
 public class Ocarina extends WoodwindFamily {
@@ -8,8 +7,4 @@ public class Ocarina extends WoodwindFamily {
         super(name, description, retailPrice, wholesalePrice, color, mainMaterial, numberOfFingerHoles);
     }
 
-    @Override
-    public String play(Customer customer) {
-        return customer.getName() + " is playing the " + this.getName();
-    }
 }

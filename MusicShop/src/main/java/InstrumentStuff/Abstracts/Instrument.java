@@ -1,9 +1,9 @@
 package InstrumentStuff.Abstracts;
 
-import InstrumentStuff.Behaviors.IPlay;
+import CustomerStuff.Customer;
 import ShopStuff.StockItem;
 
-public abstract class Instrument extends StockItem implements IPlay {
+public abstract class Instrument extends StockItem {
     private String color;
     private String mainMaterial;
 
@@ -20,5 +20,9 @@ public abstract class Instrument extends StockItem implements IPlay {
 
     public String getMainMaterial() {
         return this.mainMaterial;
+    }
+
+    public String play(Customer customer) {
+        return customer.getName() + " is playing the " + this.getName();
     }
 }

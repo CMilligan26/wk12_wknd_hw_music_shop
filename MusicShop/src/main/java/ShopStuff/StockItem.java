@@ -1,8 +1,6 @@
 package ShopStuff;
 
-import ShopStuff.Behaviors.ISell;
-
-public abstract class StockItem implements ISell {
+public abstract class StockItem {
 
     private String name;
     private String description;
@@ -16,8 +14,6 @@ public abstract class StockItem implements ISell {
         this.wholesalePrice = wholesalePrice;
     }
 
-
-    @Override
     public double calculateMarkup() {
         return this.retailPrice - this.wholesalePrice;
     }
